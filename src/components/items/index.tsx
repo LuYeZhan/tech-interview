@@ -8,8 +8,8 @@ export const Items:ItemsProps = ({data, onClick}) => {
         <TableContainer>
             {data.map(label => {
                     return (
-                        <Table onClick={onClick}>
-                            <Item label={label}/>
+                        <Table onClick={onClick} key={label}>
+                            <Item label={label} />
                         </Table>
                     )
                 }

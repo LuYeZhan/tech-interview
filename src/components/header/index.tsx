@@ -11,8 +11,8 @@ export const Header:HeaderProps = ({data, onClick}) => {
             <HistoricalTrackerContainer>
                 { data.map(label => {
                     return (
-                        <HistoricalTracker>
-                            { label === null ? <Paragraph>Please select an item</Paragraph> : <Item label={label} /> }
+                        <HistoricalTracker key={label}>
+                            { label === null ? <Paragraph>Please select an item</Paragraph> : <Item label={label}/> }
                         </HistoricalTracker>
                         ) 
                     }
